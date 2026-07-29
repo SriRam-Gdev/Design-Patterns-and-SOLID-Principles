@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Design Patterns and SOLID Principles\\Design Patterns\\MyConsoleApp.csproj",
+      "projectUniqueName": "D:\\Design Patterns and SOLID Principles\\Design Patterns and SOLID Principles\\MyConsoleApp.csproj",
       "projectName": "MyConsoleApp",
-      "projectPath": "D:\\Design Patterns and SOLID Principles\\Design Patterns\\MyConsoleApp.csproj",
+      "projectPath": "D:\\Design Patterns and SOLID Principles\\Design Patterns and SOLID Principles\\MyConsoleApp.csproj",
       "packagesPath": "C:\\Users\\ssrir\\.nuget\\packages\\",
-      "outputPath": "D:\\Design Patterns and SOLID Principles\\Design Patterns\\obj\\",
+      "outputPath": "D:\\Design Patterns and SOLID Principles\\Design Patterns and SOLID Principles\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
