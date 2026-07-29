@@ -1,11 +1,13 @@
 using System;
+using MyConsoleApp.src.OoPrinciples.Coupling;
+
 
 namespace OopPrinciples.Coupling;
 
-class EmailSender
+class EmailSender : INotificationService
 {
-    public void SendEmail(String Message)
+    public void SendNotification(string message)
     {
-        Console.WriteLine("Email sent: " + Message);
+        Console.WriteLine("Email sent: " + message);
     }
 }

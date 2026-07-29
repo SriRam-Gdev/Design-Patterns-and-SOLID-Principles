@@ -1,4 +1,5 @@
 using System;
+using MyConsoleApp.src.OoPrinciples.Coupling;
 
 namespace OopPrinciples.Coupling
 {
@@ -7,7 +8,7 @@ namespace OopPrinciples.Coupling
         public void ProcessOrder()
         {
             EmailSender emailSender = new EmailSender();
-            emailSender.SendEmail("Order processed successfully.");
+            emailSender.SendNotification("Order processed successfully.");
         }
     }
 }

@@ -1,5 +1,7 @@
 using System;
 
+namespace OopPrinciples.Abstraction;
+
 // Abstract class
 abstract class Animal
 {
@@ -23,9 +25,9 @@ class Dog : Animal
     }
 }
 
-class Program
+public static class AbstractionDemo
 {
-    static void Main()
+    public static void Run()
     {
         Animal animal = new Dog();
 
