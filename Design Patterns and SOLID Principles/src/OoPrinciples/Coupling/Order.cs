@@ -1,23 +1,13 @@
 using System;
 
-namespace OoPrinciples.Encapsulation.Coupling
+namespace OopPrinciples.Coupling
 {
     class Order
     {
-        private EmailSender emailSender;
-
-        public Order(EmailSender emailSender)
+        public void ProcessOrder()
         {
-            this.emailSender = emailSender;
-        }
-
-        public void PlaceOrder(string orderDetails)
-        {
-            // Logic to place the order
-            Console.WriteLine("Order placed: " + orderDetails);
-
-            // Send confirmation email
-            emailSender.SendEmail("Your order has been placed successfully.");
+            EmailSender emailSender = new EmailSender();
+            emailSender.SendEmail("Order processed successfully.");
         }
     }
 }
