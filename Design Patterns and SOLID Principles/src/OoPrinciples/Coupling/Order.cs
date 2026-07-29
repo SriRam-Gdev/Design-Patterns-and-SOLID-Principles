@@ -5,10 +5,17 @@ namespace OopPrinciples.Coupling
 {
     class Order
     {
+        private readonly INotificationService notificationService;
+
+        public Order(INotificationService notificationService)
+        {
+            this.notificationService = notificationService;
+        }
         public void ProcessOrder()
         {
-            EmailSender emailSender = new EmailSender();
-            emailSender.SendNotification("Order processed successfully.");
+            // Order processing logic here
+            Console.WriteLine("Order processed successfully.");
+            notificationService.SendNotification("Your order has been processed.");
         }
     }
 }

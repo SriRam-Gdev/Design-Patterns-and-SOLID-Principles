@@ -1,7 +1,5 @@
 using System;
 using MyConsoleApp.src.OoPrinciples.Coupling;
-
-
 namespace OopPrinciples.Coupling;
 
 class EmailSender : INotificationService
