@@ -1,49 +1,29 @@
 using System;
 
-class BankAccount
+namespace MyConsoleApp.src.OoPrinciples.Encapsulation
 {
-    private decimal balance;
-
-    public void Deposit(decimal amount)
+    public class BankAccount
     {
-        balance += amount;
-    }
+        private decimal balance;
 
-    public void Withdraw(decimal amount)
-    {
-        if (amount > balance)
+        public void Deposit(decimal amount)
         {
-            throw new InvalidOperationException("Insufficient funds");
+            balance += amount;
         }
-        balance -= amount;
-    }
 
-    public void GetBalance()
-    {
-        Console.WriteLine($"Current balance: {balance:C}");
-    }
-
-    class Program
-    {
-        static void Main(string[] args)
+        public void Withdraw(decimal amount)
         {
-            BankAccount account = new BankAccount();
-            account.Deposit(1000);
-            account.GetBalance();
-
-            account.Withdraw(500);
-            account.GetBalance();
-
-            try
+            if (amount > balance)
             {
-                account.Withdraw(600);
-            }
-            catch (InvalidOperationException ex)
-            {
-                Console.WriteLine(ex.Message);
+                throw new InvalidOperationException("Insufficient funds.");
             }
 
-            account.GetBalance();
+            balance -= amount;
+        }
+
+        public void GetBalance()
+        {
+            Console.WriteLine($"Current Balance: {balance:C}");
         }
     }
 }

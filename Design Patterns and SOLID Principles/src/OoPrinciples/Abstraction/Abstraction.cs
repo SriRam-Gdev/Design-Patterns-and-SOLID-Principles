@@ -25,13 +25,3 @@ class Dog : Animal
     }
 }
 
-public static class AbstractionDemo
-{
-    public static void Run()
-    {
-        Animal animal = new Dog();
-
-        animal.MakeSound();
-        animal.Sleep();
-    }
-}

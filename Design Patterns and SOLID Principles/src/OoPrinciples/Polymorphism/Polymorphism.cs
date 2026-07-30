@@ -23,15 +23,4 @@ class Vehicle
         }
     }
 
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Vehicle vehicle;
-            vehicle = new Car();
-            vehicle.Start();
-            vehicle = new Engine();
-            vehicle.Start();
-        }
-    }
 }
