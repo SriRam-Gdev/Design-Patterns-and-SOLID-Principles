@@ -22,17 +22,5 @@ class Fruits
 
     }
 
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Fruits apple = new Apple();
-            apple.Eat();
-            apple.Peel();
 
-            Fruits orange = new Orange();
-            orange.Eat();
-            orange.Peel();
-        }
-    }
 }
