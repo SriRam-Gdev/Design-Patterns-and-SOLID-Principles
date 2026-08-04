@@ -1,20 +1,15 @@
-﻿using System;
-using MyConsoleApp.src.OoPrinciples.ClassDesign;
+﻿using SOLID_Principles.S_SRP;
 
-class Program
+User user = new User
 {
-    static void Main(string[] args)
-    {
-        CoffeeMachine machine = new CoffeeMachine();
+    Name = "John Doe",
+    Email = "ssriram@gmail.com"
+};
 
-        machine.ShowInventory();
+EmailService emailService = new EmailService();
+DataBaseService dataBaseService = new DataBaseService();
+UserService userService = new UserService();
+userService.CreateUser(user);
+dataBaseService.SaveUser(user);
+emailService.SendEmail(user.Email);
 
-        machine.MakeCoffee(new Espresso());
-        machine.MakeCoffee(new Cappuccino());
-
-        Console.WriteLine();
-        Console.WriteLine("Remaining Ingredients:");
-
-        machine.ShowInventory();
-    }
-}
