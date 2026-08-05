@@ -1,15 +1,17 @@
-﻿using SOLID_Principles.S_SRP;
+﻿using System;
+using SOLID_Principles.OCP;
 
-User user = new User
-{
-    Name = "John Doe",
-    Email = "ssriram@gmail.com"
-};
+PaymentService paypal =
+    new PaymentService(new PayPalPayment());
 
-EmailService emailService = new EmailService();
-DataBaseService dataBaseService = new DataBaseService();
-UserService userService = new UserService();
-userService.CreateUser(user);
-dataBaseService.SaveUser(user);
-emailService.SendEmail(user.Email);
+PaymentService upi =
+    new PaymentService(new UPIPayment());
 
+PaymentService card =
+    new PaymentService(new CreditCardPayment());
+
+paypal.MakePayment(100);
+
+upi.MakePayment(200);
+
+card.MakePayment(300);
