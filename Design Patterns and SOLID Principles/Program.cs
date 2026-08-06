@@ -1,17 +1,7 @@
 ﻿using System;
-using SOLID_Principles.OCP;
+using SOLID_Principles.LSP;
 
-PaymentService paypal =
-    new PaymentService(new PayPalPayment());
-
-PaymentService upi =
-    new PaymentService(new UPIPayment());
-
-PaymentService card =
-    new PaymentService(new CreditCardPayment());
-
-paypal.MakePayment(100);
-
-upi.MakePayment(200);
-
-card.MakePayment(300);
+Attack attack = new Attack(new Sword());
+attack.ExecuteAttack();
+attack = new Attack(new Maze());
+attack.ExecuteAttack();
