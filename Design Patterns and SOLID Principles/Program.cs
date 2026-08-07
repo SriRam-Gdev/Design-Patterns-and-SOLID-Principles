@@ -1,7 +1,16 @@
 ﻿using System;
-using SOLID_Principles.LSP;
+using SOLID_Principles.ISP;
 
-Attack attack = new Attack(new Sword());
-attack.ExecuteAttack();
-attack = new Attack(new Maze());
-attack.ExecuteAttack();
+Sword sword = new Sword();
+
+Gun gun = new Gun();
+
+Grenade grenade = new Grenade();
+
+sword.ExecuteAttack();
+
+
+gun.ExecuteAttack();
+gun.Reload();
+
+grenade.Throw();
