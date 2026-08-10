@@ -1,16 +1,12 @@
 ﻿using System;
-using SOLID_Principles.ISP;
 
-Sword sword = new Sword();
+using SOLID_Principles.DIP;
 
-Gun gun = new Gun();
+UserService userService = new UserService(new SqlServerDatabase());
+userService.RegisterUser("John Doe");
 
-Grenade grenade = new Grenade();
+UserService userService2 = new UserService(new PostgresDatabase());
+userService2.RegisterUser("Jane Smith");
 
-sword.ExecuteAttack();
-
-
-gun.ExecuteAttack();
-gun.Reload();
-
-grenade.Throw();
+UserService userService3 = new UserService(new SqlServerDatabase());
+userService3.RegisterUser("Alice Johnson");
