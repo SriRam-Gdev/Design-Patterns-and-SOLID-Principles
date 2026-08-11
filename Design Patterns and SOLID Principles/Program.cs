@@ -1,12 +1,9 @@
-﻿using System;
+﻿using src.Concepts.Delegates;
 
-using SOLID_Principles.DIP;
+MessageService messageService = new MessageService();
 
-UserService userService = new UserService(new SqlServerDatabase());
-userService.RegisterUser("John Doe");
+BasicDelegate myDelegate = messageService.SayHello;
 
-UserService userService2 = new UserService(new PostgresDatabase());
-userService2.RegisterUser("Jane Smith");
+myDelegate("World");
 
-UserService userService3 = new UserService(new SqlServerDatabase());
-userService3.RegisterUser("Alice Johnson");
+
