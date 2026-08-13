@@ -1,9 +1,17 @@
-﻿using src.Concepts.Delegates;
+﻿using src.DesignPatterns.Creational.Prototype;
 
-MessageService messageService = new MessageService();
+var circle = new Circle { };
 
-BasicDelegate myDelegate = messageService.SayHello;
+circle.Radius = 5;
+circle.Draw();
 
-myDelegate("World");
+var rectangle = new Rectangle { };
+rectangle.Width = 10;
+rectangle.Height = 20;
+rectangle.Draw();
 
-
+var shapeActions = new ShapeActions();
+var duplicatedCircle = shapeActions.DuplicateShape(circle);
+var duplicatedRectangle = shapeActions.DuplicateShape(rectangle);
+duplicatedCircle.Draw();
+duplicatedRectangle.Draw();
