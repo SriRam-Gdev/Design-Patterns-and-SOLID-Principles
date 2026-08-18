@@ -10,5 +10,6 @@ namespace DesignPatterns.Creational.Builder.Components
         IBuilder SetWheels(Wheels wheels);
         IBuilder SetDashboard(Dashboard dashboard);
         IBuilder SetGPSNavigator(GPSNavigator gpsNavigator);
+        void BuildCarType(CarType sports);
     }
 }

@@ -62,5 +62,10 @@ namespace DesignPatterns.Creational.Builder.Components
             Reset();
             return car;
         }
+
+        public void BuildCarType(CarType sports)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

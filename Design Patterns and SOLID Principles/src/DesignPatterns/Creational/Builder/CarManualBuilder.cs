@@ -63,5 +63,9 @@ namespace DesignPatterns.Creational.Builder.Components
             return manual;
         }
 
+        public void BuildCarType(CarType sports)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
