@@ -1,34 +1,15 @@
-﻿using DesignPatterns.Creational.Builder.Components;
-
-var director = new Director();
-
-// ===============================
-// Build a Sports Car
-// ===============================
-
-var carBuilder = new CarBuilder();
-
-director.ConstructSportsCar(carBuilder);
-
-var sportsCar = carBuilder.GetCar();
-
-Console.WriteLine("===== SPORTS CAR =====");
-Console.WriteLine($"Type: {sportsCar.Type}");
-Console.WriteLine($"Seats: {sportsCar.Seats}");
-Console.WriteLine($"Convertible: {sportsCar.isConvertible}");
-Console.WriteLine($"Wheel Size: {sportsCar.Wheels.GetDiameterInInches()} inches");
+﻿using DesignPatterns.Structural.Composite;
 
 
-// ===============================
-// Build a Sports Car Manual
-// ===============================
-
-var manualBuilder = new CarManualBuilder();
-
-director.ConstructSportsCar(manualBuilder);
-
-Manual sportsCarManual = manualBuilder.GetManual();
-
-Console.WriteLine();
-Console.WriteLine("===== SPORTS CAR MANUAL =====");
-Console.WriteLine(sportsCarManual.Print());
+var box = new Box();
+box.AddItem(new Keyboard());
+box.AddItem(new Mouse());
+var box1 = new Box();
+box1.AddItem(new Keyboard());
+box1.AddItem(new Mouse());
+box.AddItem(box1);
+var box2 = new Box();
+box2.AddItem(new Keyboard());
+box2.AddItem(new Mouse());
+box.AddItem(box2);
+Console.WriteLine($"Total Price: {box.GetPrice()}");
